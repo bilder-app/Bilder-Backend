@@ -46,8 +46,8 @@ router.get("/:id", (req, res) => {
 
 //Crea un producto
 router.post("/", (req, res) => {
-  const { nombre, descripcion, descripcionCorta, precio, stock } = req.body;
-  addProduct(nombre, descripcion, descripcionCorta, precio, stock)
+  const { name, description, price, stock } = req.body;
+  addProduct({ name, description, price, stock })
     .then((resp) => res.json(resp))
     .catch((err) => {
       console.log(err);

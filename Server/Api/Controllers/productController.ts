@@ -13,18 +13,21 @@ export async function getProduct(id: any) {
   return Product.findOne({ where: { id } });
 }
 
-export async function addProduct(
-  name: string,
-  description: string,
-  shortDescription: string,
-  price: number,
-  stock: number
-) {
+export async function addProduct({
+  name,
+  description,
+  price,
+  stock
+}: {
+  name: string;
+  description: string;
+  price: number;
+  stock: number;
+}) {
   return Product.findOrCreate({
     where: {
       name,
       description,
-      shortDescription,
       price,
       stock: stock,
       images: [
