@@ -1,17 +1,20 @@
 import { Table, Column, Model, ForeignKey } from "sequelize-typescript";
-import Person from "./Person";
+import Order from "./Order";
 import Product from "./Product";
 
 @Table
-export default class ProductInCart extends Model {
+export default class ProductInOrder extends Model {
   @ForeignKey(() => Product)
   @Column
   productId: number;
 
-  @ForeignKey(() => Person)
+  @ForeignKey(() => Order)
   @Column
-  personId: number;
+  orderId: number;
 
   @Column({ allowNull: false })
   amount: number;
+
+  @Column({ allowNull: false })
+  price: number;
 }

@@ -6,12 +6,13 @@ import {
   DataType,
   BelongsToMany,
   BelongsTo,
-  HasMany
+  HasMany,
 } from "sequelize-typescript";
 import Business from "./Business";
 import Category from "./Category";
 import Order from "./Order";
 import ProductInCart from "./ProductInCart";
+import ProductInOrder from "./ProductInOrder";
 import ProductCategory from "./ProductCategory";
 import Person from "./Person";
 import FavouriteProduct from "./FavouriteProduct";
@@ -38,8 +39,11 @@ export default class Product extends Model {
   @Column({ allowNull: false, type: DataType.ARRAY(DataType.STRING) })
   images: [];
 
-  @BelongsToMany(() => Order, () => ProductInCart)
+  @BelongsToMany(() => Order, () => ProductInOrder)
   orders: Order[];
+
+  @BelongsToMany(() => Person, () => ProductInCart)
+  people: Person[];
 
   @BelongsToMany(() => Category, () => ProductCategory)
   categories: Array<ProductCategory & { ProductCategory: ProductCategory }>;

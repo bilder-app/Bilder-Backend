@@ -10,6 +10,7 @@ import Order from "./Order";
 import Product from "./Product";
 import FavouriteProduct from "./FavouriteProduct";
 import User from "./User";
+import ProductInCart from "./ProductInCart";
 
 @Table
 export default class Person extends Model {
@@ -31,6 +32,9 @@ export default class Person extends Model {
 
   @HasMany(() => Order)
   orders: Order[];
+
+  @BelongsToMany(() => Product, () => ProductInCart)
+  cartProducts: ProductInCart[];
 
   @BelongsToMany(() => Product, () => FavouriteProduct)
   favorites: FavouriteProduct[];

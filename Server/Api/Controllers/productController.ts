@@ -3,40 +3,11 @@ import Category from "../../Models/Category";
 import Product from "../../Models/Product";
 import { removeDiacritics } from "../../utils";
 
-export async function getAllProducts() {
-  return Product.findAll({
-    include: [{ model: Category, through: { attributes: [] } }]
-  });
-}
+export async function getAllProducts() {}
 
-export async function getProduct(id: any) {
-  return Product.findOne({ where: { id } });
-}
+export async function getProduct(id: any) {}
 
-export async function addProduct({
-  name,
-  description,
-  price,
-  stock
-}: {
-  name: string;
-  description: string;
-  price: number;
-  stock: number;
-}) {
-  return Product.findOrCreate({
-    where: {
-      name,
-      description,
-      price,
-      stock: stock,
-      images: [
-        "https://images.app.goo.gl/RcgLkEbTz1aRegpeA",
-        "https://images.app.goo.gl/oXwgPP32RdmAkd6T7"
-      ]
-    }
-  });
-}
+export async function addProduct() {}
 
 export async function paginatedSearchProducts({
   name,

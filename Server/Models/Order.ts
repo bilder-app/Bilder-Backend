@@ -7,7 +7,7 @@ import {
   BelongsToMany,
   HasOne
 } from "sequelize-typescript";
-import ProductInCart from "./ProductInCart";
+import ProductInOrder from "./ProductInOrder";
 import Product from "./Product";
 import Person from "./Person";
 import Shipping from "./Shipping";
@@ -24,7 +24,7 @@ export default class Order extends Model {
   })
   state: string[];
 
-  @BelongsToMany(() => Product, () => ProductInCart)
+  @BelongsToMany(() => Product, () => ProductInOrder)
   products: Product[];
 
   @HasOne(() => Shipping)
