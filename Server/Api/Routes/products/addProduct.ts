@@ -1,4 +1,3 @@
-import Category from "../../../Models/Category";
 import Product from "../../../Models/Product";
 import { Router } from "express";
 
