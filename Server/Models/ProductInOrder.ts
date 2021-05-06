@@ -3,7 +3,7 @@ import Order from "./Order";
 import Product from "./Product";
 
 @Table
-export default class ProductInCart extends Model {
+export default class ProductInOrder extends Model {
   @ForeignKey(() => Product)
   @Column
   productId: number;
