@@ -1,7 +1,7 @@
 import Category from "../../../Models/Category";
 import { Router } from "express";
 
-const ROUTE = "/auth/is-logged-in";
+const ROUTE = "/category";
 
 export default Router({ mergeParams: true }).get(ROUTE, (req, res) => {
   res.json(Category.findAll());
