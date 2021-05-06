@@ -33,7 +33,7 @@ export default class Person extends Model {
   @HasMany(() => Order)
   orders: Order[];
 
-  @HasMany(() => ProductInCart)
+  @BelongsToMany(() => Product, () => ProductInCart)
   cartProducts: ProductInCart[];
 
   @BelongsToMany(() => Product, () => FavouriteProduct)
