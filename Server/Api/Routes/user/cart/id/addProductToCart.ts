@@ -1,10 +1,13 @@
 import { Router } from "express";
-import Person from "../../../../../Models/Person";
+import isPerson from "../../../../middleware/isPerson";
 
 const ROUTE = "/user/cart/:productId";
 
-export default Router({ mergeParams: true }).post(ROUTE, async (req, res) => {
-  const { productId } = req.params;
-  const person = await Person.findByPk(req.user!.id);
-  res.json(person!.$add("cartProducts", productId));
-});
+export default Router({ mergeParams: true }).post(
+  ROUTE,
+  isPerson,
+  async (req, res) => {
+    const { productId } = req.params;
+    res.json(req.person!.$add("cartProducts", productId));
+  }
+);

@@ -1,10 +1,13 @@
 import { Router } from "express";
-import Person from "../../../../Models/Person";
+import isPerson from "../../../middleware/isPerson";
 
 const ROUTE = "/user/cart";
 
-export default Router({ mergeParams: true }).delete(ROUTE, async (req, res) => {
-  const person = await Person.findByPk(req.user!.id);
-  await person!.$set("cartProducts", []);
-  res.sendStatus(200);
-});
+export default Router({ mergeParams: true }).delete(
+  ROUTE,
+  isPerson,
+  async (req, res) => {
+    await req.person!.$set("cartProducts", []);
+    res.sendStatus(200);
+  }
+);

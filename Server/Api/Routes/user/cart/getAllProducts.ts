@@ -1,9 +1,10 @@
 import { Router } from "express";
-import Person from "../../../../Models/Person";
+import isPerson from "../../../middleware/isPerson";
 
 const ROUTE = "/user/cart";
 
-export default Router({ mergeParams: true }).get(ROUTE, async (req, res) => {
-  const person = await Person.findByPk(req.user!.id);
-  res.json(person!.$get("cartProducts"));
-});
+export default Router({ mergeParams: true }).get(
+  ROUTE,
+  isPerson,
+  async (req, res) => res.json(req.person!.$get("cartProducts"))
+);
