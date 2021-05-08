@@ -6,7 +6,7 @@ import {
   DataType,
   BelongsToMany,
   BelongsTo,
-  HasMany,
+  HasMany
 } from "sequelize-typescript";
 import Business from "./Business";
 import Category from "./Category";
@@ -55,5 +55,5 @@ export default class Product extends Model {
   favouriteProduct: FavouriteProduct[];
 
   @HasMany(() => Offer)
-  offer: Offer;
+  offers: Array<Offer & { Offer: Offer }>;
 }
