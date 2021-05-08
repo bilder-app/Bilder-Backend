@@ -4,9 +4,9 @@ import { Router } from "express";
 
 const ROUTE = "/products";
 
-export default Router({ mergeParams: true }).get(ROUTE, (req, res) => {
+export default Router({ mergeParams: true }).get(ROUTE, async (req, res) => {
   res.json(
-    Product.findAll({
+    await Product.findAll({
       include: [{ model: Category, through: { attributes: [] } }]
     })
   );
