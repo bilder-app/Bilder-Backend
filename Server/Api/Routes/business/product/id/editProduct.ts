@@ -1,7 +1,7 @@
 import { Router } from "express";
 import isBusiness from "../../../../middleware/isBusiness";
 
-const ROUTE = "/business/product/:productId";
+const ROUTE = "/business/products/:productId";
 
 export default Router({ mergeParams: true }).put(
   ROUTE,
