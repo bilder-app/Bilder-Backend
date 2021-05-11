@@ -1,6 +1,9 @@
 import express from "express";
 import Order from "../Models/Order";
 import ProductInCart from "../Models/ProductInCart";
+import ProductInCart from "../Models/ProductInCart";
+import isBusiness from "../Api/middleware/isBusiness";
+
 const router = express.Router();
 
 router.put("/product", async (req, res) => {
@@ -14,5 +17,13 @@ router.put("/product", async (req, res) => {
   });
   res.sendStatus(200);
 });
+
+router.get("/orders", isBusiness, async (req, res) => {
+  res.json(
+    await req.business!.$get("orders", {
+      include: [{ model: ProductInCart }]
+    })
+  );
+})
 
 export default router;
