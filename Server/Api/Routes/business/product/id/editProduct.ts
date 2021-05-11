@@ -3,7 +3,7 @@ import isBusiness from "../../../../middleware/isBusiness";
 
 const ROUTE = "/business/product/:productId";
 
-export default Router({ mergeParams: true }).get(
+export default Router({ mergeParams: true }).put(
   ROUTE,
   isBusiness,
   async (req, res) => {
