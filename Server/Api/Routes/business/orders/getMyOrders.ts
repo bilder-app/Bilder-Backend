@@ -10,10 +10,8 @@ export default Router({ mergeParams: true }).get(
   ROUTE,
   isBusiness,
   async (req, res) => {
-    console.log(req)
-    const { businessId } = req.body
     const myProducts = await Product.findAll({
-      where: { businessId:  businessId }
+      where: { businessId:  req.business.id }
     })
     
     const promisesArr = myProducts.map(async ({ id }) => {
