@@ -1,9 +1,9 @@
 import { Router } from "express";
 import isBusiness from "../../../../middleware/isBusiness";
 
-const ROUTE = "/business/product/:productId";
+const ROUTE = "/business/products/:productId";
 
-export default Router({ mergeParams: true }).get(
+export default Router({ mergeParams: true }).delete(
   ROUTE,
   isBusiness,
   async (req, res) => {
@@ -12,7 +12,7 @@ export default Router({ mergeParams: true }).get(
       where: { id: productId }
     });
     if (!product) return res.sendStatus(404);
-    const updatedProduct = await product.update(req.body, { returning: true });
-    res.json(updatedProduct);
+    await product.destroy();
+    res.sendStatus(200);
   }
 );

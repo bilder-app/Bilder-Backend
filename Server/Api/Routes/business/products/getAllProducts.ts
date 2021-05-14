@@ -10,7 +10,8 @@ export default Router({ mergeParams: true }).get(
   async (req, res) => {
     res.json(
       await req.business!.$get("products", {
-        include: [{ model: Offer }]
+        include: [{ model: Offer }],
+        order: [["name", "ASC"]]
       })
     );
   }
