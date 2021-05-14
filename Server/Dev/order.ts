@@ -45,11 +45,14 @@ router.get("/", async (req, res) => {
   })
 
   setTimeout(() => {
-    try {
-      res.json(Promise.all(promisesArr))
-    } catch(error) {
-      console.log('error:', error);
+    async function orders() {
+      try {
+        res.json(await Promise.all(promisesArr))
+      } catch(error) {
+        console.log('error:', error);
+      }
     }
+    orders()
   }, 1000)
 })
 
