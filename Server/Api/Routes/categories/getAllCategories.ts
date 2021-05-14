@@ -4,5 +4,9 @@ import { Router } from "express";
 const ROUTE = "/categories";
 
 export default Router({ mergeParams: true }).get(ROUTE, (req, res) => {
-  res.json(Category.findAll());
+  Category.findAll()
+    .then((resp) => {
+      res.send(resp);
+    })
+    .catch((err) => res.status(400).json(err));
 });

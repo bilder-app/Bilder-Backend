@@ -6,7 +6,7 @@ import {
   DataType,
   BelongsToMany,
   BelongsTo,
-  HasMany
+  HasMany,
 } from "sequelize-typescript";
 import Business from "./Business";
 import Category from "./Category";
@@ -35,6 +35,33 @@ export default class Product extends Model {
 
   @Column({ allowNull: false })
   stock: number;
+
+  @Column({ allowNull: true })
+  content: number;
+  @Column({
+    allowNull: false,
+    type: DataType.ENUM(
+      "Kilo (k)",
+      "Gramo (g)",
+      "Metro (m)",
+      "Metro cuadrado(m2)",
+      "Metro cúbico (m3)",
+      "Centimetro (cm)",
+      "Centimetro cúbico (cc)",
+      "Pulgada ('')",
+      "Litro (l)",
+      "Militro (ml)",
+      "Unidad (u)",
+      "Watt (w) "
+    ),
+  })
+  contentType: string;
+
+  @Column({ allowNull: true })
+  model: string;
+
+  @Column({ allowNull: true })
+  brand: string;
 
   @Column({ allowNull: false, type: DataType.ARRAY(DataType.STRING) })
   images: [];
