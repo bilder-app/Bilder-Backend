@@ -66,7 +66,7 @@ export default class Product extends Model {
   @Column({ allowNull: false, type: DataType.ARRAY(DataType.STRING) })
   images: [];
 
-  @BelongsToMany(() => Order, () => ProductInOrder)
+  @HasMany(() => ProductInOrder)
   orders: Order[];
 
   @BelongsToMany(() => Person, () => ProductInCart)

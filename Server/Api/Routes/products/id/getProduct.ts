@@ -4,7 +4,9 @@ import { Router } from "express";
 
 const ROUTE = "/products/:productId";
 
-export default Router({ mergeParams: true }).get(ROUTE, (req, res) => {
+export default Router({ mergeParams: true }).get(ROUTE, async (req, res) => {
   const { productId } = req.params;
-  return Product.findByPk(productId);
+   res.json(
+    await Product.findByPk(productId)
+  );
 });
