@@ -1,7 +1,7 @@
 import { Router } from "express";
 import isBusiness from "../../middleware/isBusiness";
 
-const ROUTE = "/business/me";
+const ROUTE = "/me/business";
 
 export default Router({ mergeParams: true }).get(
   ROUTE,

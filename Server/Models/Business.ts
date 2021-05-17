@@ -18,6 +18,9 @@ export default class Business extends Model {
   name: string;
 
   @Column({ allowNull: false })
+  image: string;
+
+  @Column({ allowNull: false })
   surname: string;
 
   @Column({ allowNull: false })

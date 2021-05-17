@@ -9,13 +9,13 @@ export default Router({ mergeParams: true }).get(
   ROUTE,
   isBusiness,
   async (req, res) => {
-   const result = await Order.findAll({
+    const result = await Order.findAll({
       where: { state: "completed" },
       include: {
         model: Product,
-        where: { businessId: req.business.id } 
-      }
-    })
-    res.json(result)
+        where: { businessId: req.business!.id },
+      },
+    });
+    res.json(result);
   }
 );
