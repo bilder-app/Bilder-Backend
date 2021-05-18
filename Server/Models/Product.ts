@@ -38,6 +38,7 @@ export default class Product extends Model {
 
   @Column({ allowNull: true })
   content: number;
+  
   @Column({
     allowNull: false,
     type: DataType.ENUM(
