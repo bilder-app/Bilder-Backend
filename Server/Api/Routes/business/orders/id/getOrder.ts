@@ -23,7 +23,6 @@ export default Router({ mergeParams: true }).get(
         }
       ]
     })
-    console.log(result)
     res.json(result)
   }
 );
