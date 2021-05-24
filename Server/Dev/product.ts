@@ -20,6 +20,7 @@ router.post("/:amount", async (req, res) => {
       stock: ~~(Math.random() * 150),
       description: faker.commerce.productDescription(),
       shortDescription: faker.commerce.productAdjective(),
+      contentType: "Unidad (u)",
       images: images
     });
   }

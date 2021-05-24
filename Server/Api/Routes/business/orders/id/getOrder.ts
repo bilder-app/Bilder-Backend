@@ -1,6 +1,7 @@
 import { Router } from "express";
 import Product from "../../../../../Models/Product";
 import Order from "../../../../../Models/Order";
+import Shipping from "../../../../../Models/Shipping";
 import isBusiness from "../../../../middleware/isBusiness";
 
 const ROUTE = "/business/orders/:orderId";
@@ -12,11 +13,17 @@ export default Router({ mergeParams: true }).get(
     const { orderId } = req.params;
     const result = await Order.findOne({
       where: { id: orderId, state: "completed" },
-      include: {
-        model: Product,
-        where: { businessId: req.business.id } 
-      }
+      include: [
+        {
+          model: Product,
+          where: { businessId: req.business.id } 
+        },
+        {
+          model: Shipping
+        }
+      ]
     })
+    console.log(result)
     res.json(result)
   }
 );
