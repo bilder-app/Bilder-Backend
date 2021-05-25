@@ -5,7 +5,7 @@ import Shipping from "../../../../../Models/Shipping";
 import isBusiness from "../../../../middleware/isBusiness";
 
 const ROUTE = "/business/orders/:orderId";
- 
+
 export default Router({ mergeParams: true }).get(
   ROUTE,
   isBusiness,
@@ -16,14 +16,14 @@ export default Router({ mergeParams: true }).get(
       include: [
         {
           model: Product,
-          where: { businessId: req.business.id } 
+          where: { businessId: req.business!.id },
         },
         {
-          model: Shipping
-        }
-      ]
-    })
-    console.log(result)
-    res.json(result)
+          model: Shipping,
+        },
+      ],
+    });
+    console.log(result);
+    res.json(result);
   }
 );
