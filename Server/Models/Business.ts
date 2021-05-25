@@ -4,7 +4,7 @@ import {
   Model,
   DataType,
   ForeignKey,
-  HasMany,
+  HasMany
 } from "sequelize-typescript";
 import Product from "./Product";
 import User from "./User";
@@ -24,6 +24,9 @@ export default class Business extends Model {
   @Column({ allowNull: false })
   nameBusiness: string;
 
+  @Column({ allowNull: true })
+  profileImage: string;
+
   @Column({ allowNull: false })
   cuit: string;
 
@@ -39,7 +42,7 @@ export default class Business extends Model {
       "Materiales electricos",
       "Griferia",
       "Regatones"
-    ),
+    )
   })
   sector: string;
 
