@@ -8,6 +8,7 @@
     "dev": "concurrently \"nodemon dist/App.js\" \"npm run watch-ts\"",
     "start": "node dist/App.js",
     "watch-ts": "tsc --w",
+    "build": "tsc",
     "postinstall": "npm run build"
   },
   "keywords": [],
