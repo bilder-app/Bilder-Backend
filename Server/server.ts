@@ -11,6 +11,7 @@ import passportConfig from "./passportConfig";
 import routes from "./Api/Routes/createRouter";
 
 const server = express();
+const { NODE_ENV } = process.env;
 
 // ---- MIDDLEWARE --------
 
@@ -29,13 +30,25 @@ server.use(
   })
 );
 
-server.use(
-  session({
-    secret: SESSION_SECRET,
-    resave: false,
-    saveUninitialized: false
-  })
-);
+if (NODE_ENV === "production") {
+  server.use(
+    session({
+      secret: SESSION_SECRET,
+      resave: false,
+      proxy: true,
+      saveUninitialized: false,
+      cookie: { sameSite: "none", httpOnly: false, secure: true }
+    })
+  );
+} else {
+  server.use(
+    session({
+      secret: SESSION_SECRET,
+      resave: false,
+      saveUninitialized: false
+    })
+  );
+}
 
 server.use(passport.initialize());
 server.use(passport.session());

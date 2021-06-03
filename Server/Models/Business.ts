@@ -2,8 +2,9 @@ import {
   Table,
   Column,
   Model,
+  DataType,
   ForeignKey,
-  HasMany,
+  HasMany
 } from "sequelize-typescript";
 import Product from "./Product";
 import User from "./User";
@@ -21,9 +22,28 @@ export default class Business extends Model {
   surname: string;
 
   @Column({ allowNull: false })
-  cuit: string;
+  nameBusiness: string;
 
   @Column({ allowNull: true })
+  profileImage: string;
+
+  @Column({ allowNull: false })
+  cuit: string;
+
+  @Column({
+    allowNull: false,
+    type: DataType.ENUM(
+      "Bulonera",
+      "Ferreteria",
+      "Materiales de Construcción",
+      "Siderometalurgia",
+      "Maderera",
+      "Pintureria",
+      "Materiales electricos",
+      "Griferia",
+      "Regatones"
+    )
+  })
   sector: string;
 
   @Column({ allowNull: true })

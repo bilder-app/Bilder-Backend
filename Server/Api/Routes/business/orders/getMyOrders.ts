@@ -26,7 +26,7 @@ export default Router({ mergeParams: true }).get(
       include: [
         {
           model: Product,
-          where: { businessId: req.business.id }
+          where: { businessId: req.business!.id },
         },
         {
           model: Shipping,

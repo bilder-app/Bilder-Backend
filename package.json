@@ -6,7 +6,10 @@
   "scripts": {
     "test": "jest Server",
     "dev": "concurrently \"nodemon dist/App.js\" \"npm run watch-ts\"",
-    "watch-ts": "tsc --w"
+    "start": "node dist/App.js",
+    "watch-ts": "tsc --w",
+    "build": "tsc",
+    "postinstall": "npm run build"
   },
   "keywords": [],
   "author": "",
