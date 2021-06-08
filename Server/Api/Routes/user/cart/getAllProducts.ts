@@ -6,5 +6,11 @@ const ROUTE = "/user/cart";
 export default Router({ mergeParams: true }).get(
   ROUTE,
   isPerson,
-  async (req, res) =>  res.json(await req.person!.$get("cartProducts"))
+  async (req, res) =>
+    res.json(
+      await req.person!.$get("cartProducts", {
+        //@ts-ignore
+        joinTableAttributes: []
+      })
+    )
 );
