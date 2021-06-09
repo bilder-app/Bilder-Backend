@@ -9,11 +9,11 @@ import {
   HasMany,
 } from "sequelize-typescript";
 import Business from "./Business";
-import Category from "./Category";
+import SubCategory from "./SubCategory";
 import Order from "./Order";
 import ProductInCart from "./ProductInCart";
 import ProductInOrder from "./ProductInOrder";
-import ProductCategory from "./ProductCategory";
+import ProductSubCategory from "./ProductSubCategory";
 import Person from "./Person";
 import FavouriteProduct from "./FavouriteProduct";
 import Offer from "./Offer";
@@ -38,7 +38,7 @@ export default class Product extends Model {
 
   @Column({ allowNull: true })
   content: number;
-  
+
   @Column({
     allowNull: false,
     type: DataType.ENUM(
@@ -73,8 +73,10 @@ export default class Product extends Model {
   @BelongsToMany(() => Person, () => ProductInCart)
   people: Person[];
 
-  @BelongsToMany(() => Category, () => ProductCategory)
-  categories: Array<ProductCategory & { ProductCategory: ProductCategory }>;
+  @BelongsToMany(() => SubCategory, () => ProductSubCategory)
+  subcategories: Array<
+    ProductSubCategory & { ProductSubCategory: ProductSubCategory }
+  >;
 
   @BelongsTo(() => Business)
   business: Business;
