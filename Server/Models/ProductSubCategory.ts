@@ -1,15 +1,14 @@
 import { Table, Column, Model, ForeignKey } from "sequelize-typescript";
-import Category from "./Category";
 import Product from "./Product";
+import SubCategory from "./SubCategory";
 
 @Table
-export default class ProductCategory extends Model {
+export default class ProductSubCategory extends Model {
   @ForeignKey(() => Product)
   @Column
   productId: number;
 
-  @ForeignKey(() => Category)
+  @ForeignKey(() => SubCategory)
   @Column
-  name: string;
-
+  subcategory: string;
 }
