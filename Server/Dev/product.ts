@@ -21,7 +21,7 @@ router.post("/:amount", async (req, res) => {
       description: faker.commerce.productDescription(),
       shortDescription: faker.commerce.productAdjective(),
       contentType: "Unidad (u)",
-      images: images
+      images: images,
     });
   }
 
@@ -29,22 +29,22 @@ router.post("/:amount", async (req, res) => {
   res.sendStatus(200);
 });
 
-router.get("/associate/category/all", async (req, res) => {
-  const products = await Product.findAll();
-  const categories: string[] = await (await Category.findAll()).map(
-    (cat) => cat.name
-  );
+// router.get("/associate/category/all", async (req, res) => {
+//   const products = await Product.findAll();
+//   const categories: string[] = await (await Category.findAll()).map(
+//     (cat) => cat.name
+//   );
 
-  const randomIdx = () => ~~(Math.random() * categories.length);
+//   const randomIdx = () => ~~(Math.random() * categories.length);
 
-  await products.forEach(async (product) => {
-    await product.$set("categories", [
-      categories[randomIdx()],
-      categories[randomIdx()]
-    ]);
-  });
+//   await products.forEach(async (product) => {
+//     await product.$set("categories", [
+//       categories[randomIdx()],
+//       categories[randomIdx()]
+//     ]);
+//   });
 
-  res.sendStatus(200);
-});
+//   res.sendStatus(200);
+// });
 
 export default router;

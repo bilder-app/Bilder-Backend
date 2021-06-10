@@ -7,9 +7,11 @@ import {
   BelongsToMany,
   BelongsTo,
   HasMany,
+  HasOne,
 } from "sequelize-typescript";
 import Business from "./Business";
 import SubCategory from "./SubCategory";
+import Category from "./Category";
 import Order from "./Order";
 import ProductInCart from "./ProductInCart";
 import ProductInOrder from "./ProductInOrder";
@@ -23,6 +25,10 @@ export default class Product extends Model {
   @ForeignKey(() => Business)
   @Column
   businessId: number;
+
+  @ForeignKey(() => Category)
+  @Column
+  categoryName: string;
 
   @Column({ allowNull: false })
   name: string;
@@ -80,6 +86,9 @@ export default class Product extends Model {
 
   @BelongsTo(() => Business)
   business: Business;
+
+  @BelongsTo(() => Category)
+  category: Category;
 
   @BelongsToMany(() => Person, () => FavouriteProduct)
   favouriteProduct: FavouriteProduct[];
