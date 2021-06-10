@@ -6,7 +6,9 @@ const ROUTE = "/products/:productId";
 
 export default Router({ mergeParams: true }).get(ROUTE, async (req, res) => {
   const { productId } = req.params;
-   res.json(
-    await Product.findByPk(productId)
+  res.json(
+    await Product.findByPk(productId, {
+      // include: [{ model: Category }]
+    })
   );
 });
