@@ -6,7 +6,7 @@ import server from "./server";
 const { PORT } = process.env;
 
 sequelize
-  .sync({ force: false })
+  .sync({ force: true })
   .then(() => {
     console.log("Sequelize connected successfully");
   })
