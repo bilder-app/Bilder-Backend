@@ -1,6 +1,5 @@
 import { Router } from "express";
 import Category from "../../../../Models/Category";
-import SubCategory from "../../../../Models/SubCategory";
 
 const ROUTE = "/categories/subcategory/";
 
