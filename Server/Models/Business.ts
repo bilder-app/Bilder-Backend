@@ -46,6 +46,18 @@ export default class Business extends Model {
   })
   sector: string;
 
+  @Column({ allowNull: false, type: DataType.BOOLEAN })
+  takeAway: boolean;
+
+  @Column({ allowNull: false, type: DataType.BOOLEAN })
+  delivery: boolean;
+
+  @Column({ allowNull: true })
+  deliveryPrice: number;
+
+  @Column({ allowNull: true })
+  freeDeliveryAt: number;
+
   @Column({ allowNull: true })
   address: string;
 

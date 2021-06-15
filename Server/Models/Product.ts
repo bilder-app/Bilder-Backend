@@ -7,7 +7,7 @@ import {
   BelongsToMany,
   BelongsTo,
   HasMany,
-  HasOne,
+  HasOne
 } from "sequelize-typescript";
 import Business from "./Business";
 import SubCategory from "./SubCategory";
@@ -33,7 +33,7 @@ export default class Product extends Model {
   @Column({ allowNull: false })
   name: string;
 
-  @Column({ allowNull: false })
+  @Column({ allowNull: false, type: DataType.STRING(300) })
   description: string;
 
   @Column({ allowNull: false })
@@ -60,7 +60,7 @@ export default class Product extends Model {
       "Militro (ml)",
       "Unidad (u)",
       "Watt (w) "
-    ),
+    )
   })
   contentType: string;
 
