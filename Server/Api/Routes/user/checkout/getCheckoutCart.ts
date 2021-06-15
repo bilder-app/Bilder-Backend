@@ -1,26 +1,7 @@
 import { Router } from "express";
 import isPerson from "../../../middleware/isPerson";
 import Business from "../../../../Models/Business";
-import Sequelize from "sequelize";
 import { remap } from "../../../../ramdaHelperFns";
-import { map, forEachObjIndexed, forEach } from "ramda";
-
-// "id": 2,
-// "name": "Pintura",
-// "price": 99,
-// "images": [
-//     "https://picsum.photos/id/537/1000/1000"
-// ],
-// "business": {
-//     "id": 2,
-//     "takeAway": false,
-//     "delivery": false,
-//     "deliveryPrice": null,
-//     "freeDeliveryAt": null
-// },
-// "ProductInCart": {
-//     "amount": 1
-// }
 
 const ROUTE = "/user/checkout/cart";
 
