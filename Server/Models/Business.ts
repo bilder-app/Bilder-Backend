@@ -4,7 +4,7 @@ import {
   Model,
   DataType,
   ForeignKey,
-  HasMany
+  HasMany,
 } from "sequelize-typescript";
 import Product from "./Product";
 import User from "./User";
@@ -42,9 +42,21 @@ export default class Business extends Model {
       "Materiales electricos",
       "Griferia",
       "Regatones"
-    )
+    ),
   })
   sector: string;
+
+  @Column({ allowNull: true, type: DataType.ENUM("Si", "No") })
+  takeAway: string;
+
+  @Column({ allowNull: true, type: DataType.ENUM("Si", "No") })
+  delivery: string;
+
+  @Column({ allowNull: true })
+  deliveryPrice: number;
+
+  @Column({ allowNull: true })
+  deliveryFree: number;
 
   @Column({ allowNull: true })
   address: string;
