@@ -19,8 +19,7 @@ export default Router({ mergeParams: true }).get(
       ],
       "1": { state: "sent" }
     }
-    
-    console.log(req.query)
+
     const result = await Order.findAll({
       where: { state: "completed" },
       include: [
