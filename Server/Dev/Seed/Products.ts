@@ -15,6 +15,7 @@ export const businesses: any = [
       deliveryPrice: 1000,
       freeDeliveryAt: 1000,
       contact: "asd",
+      address: "Pancho 123",
       products: [
         {
           name: "Cemento Holcim Cpc 40 X 50 Kg",
@@ -83,6 +84,7 @@ export const businesses: any = [
       deliveryPrice: 1000,
       freeDeliveryAt: 1000,
       contact: "asd",
+      address: "Av huevo frito",
       products: [
         {
           name: "Chapa Acanalada Galvanizada C-30 Ancho 0,88mts Oferta!!!",
