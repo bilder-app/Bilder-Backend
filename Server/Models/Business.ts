@@ -8,6 +8,7 @@ import {
 } from "sequelize-typescript";
 import Product from "./Product";
 import User from "./User";
+import BusinessOrder from "./BusinessOrder";
 
 @Table
 export default class Business extends Model {
@@ -66,4 +67,7 @@ export default class Business extends Model {
 
   @HasMany(() => Product)
   products: Product[];
+
+  @HasMany(() => BusinessOrder)
+  BusinessOrder: Array<BusinessOrder & { BusinessOrder: BusinessOrder }>;
 }
