@@ -9,8 +9,13 @@ export default Router({ mergeParams: true }).post(
   ROUTE,
   isPerson,
   async (req, res) => {
+    const { productsPrice, shippingPrice } = req.body;
     const cartProds = await req.person!.$get("cartProducts");
-    const newOrder = await Order.create({ userId: req.person!.id });
+    const newOrder = await Order.create({
+      userId: req.person!.id,
+      productsPrice,
+      shippingPrice
+    });
     await newOrder.$create("shipping", { state: "preparing" });
     cartProds.forEach(async (product) => {
       await ProductInOrder.create({

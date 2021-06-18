@@ -22,4 +22,10 @@ export default class Order extends Model {
 
   @HasOne(() => Shipping)
   shipping: Shipping;
+
+  @Column
+  productsPrice: number;
+
+  @Column
+  shippingPrice: number;
 }
