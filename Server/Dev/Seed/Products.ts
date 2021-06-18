@@ -25,8 +25,8 @@ export const businesses: any = [
           content: 50,
           contentType: "Kilo (k)",
           images: [
-            "https://www.hierrosmaldonado.com.ar/1180-large_default/cemento-holcim-cpc-40-x-50-kg.jpg"
-          ]
+            "https://www.hierrosmaldonado.com.ar/1180-large_default/cemento-holcim-cpc-40-x-50-kg.jpg",
+          ],
         },
         {
           name: "Revoque Fino Interiores Weber A La Cal 25 K Terminaciones Mm",
@@ -37,8 +37,8 @@ export const businesses: any = [
           content: 25,
           contentType: "Kilo (k)",
           images: [
-            "https://http2.mlstatic.com/D_NQ_NP_2X_736274-MLA31652847102_082019-F.webp"
-          ]
+            "https://http2.mlstatic.com/D_NQ_NP_2X_736274-MLA31652847102_082019-F.webp",
+          ],
         },
         {
           name: "Ceresita Weber Hidrofugo 20 K Pasta Pared Exterior Pisotecho",
@@ -49,8 +49,8 @@ export const businesses: any = [
           content: 20,
           contentType: "Kilo (k)",
           images: [
-            "https://http2.mlstatic.com/D_NQ_NP_2X_735513-MLA31641801182_072019-F.webp"
-          ]
+            "https://http2.mlstatic.com/D_NQ_NP_2X_735513-MLA31641801182_072019-F.webp",
+          ],
         },
         {
           name: "Amoladora angular Lusqtoff AML850-8 de 50 Hz naranja 850 W 220 V",
@@ -61,11 +61,11 @@ export const businesses: any = [
           content: 1,
           contentType: "Unidad (u)",
           images: [
-            "https://http2.mlstatic.com/D_NQ_NP_2X_658725-MLA43228610507_082020-F.webp"
-          ]
-        }
-      ]
-    }
+            "https://http2.mlstatic.com/D_NQ_NP_2X_658725-MLA43228610507_082020-F.webp",
+          ],
+        },
+      ],
+    },
   },
   {
     business: {
@@ -76,10 +76,10 @@ export const businesses: any = [
         "https://lh3.googleusercontent.com/Ezq1_I9wPSPy9EGd8BhrfK1kHaY-rF0XsfC87RlIy90mUqMMsTZfn_Obj8uI_H-uC5WvVi4Y4Z6-V9JX=w1080-h608-p-no-v0",
       cuit: 123455566,
       sector: "Siderometalurgia",
-      takeAway: false,
+      takeAway: true,
       password: "asd",
       email: "asd",
-      delivery: true,
+      delivery: false,
       deliveryPrice: 1000,
       freeDeliveryAt: 1000,
       contact: "asd",
@@ -93,8 +93,8 @@ export const businesses: any = [
           content: 1,
           contentType: "Unidad (u)",
           images: [
-            "https://http2.mlstatic.com/D_NQ_NP_2X_658725-MLA43228610507_082020-F.webp"
-          ]
+            "https://http2.mlstatic.com/D_NQ_NP_2X_658725-MLA43228610507_082020-F.webp",
+          ],
         },
         {
           name: "Caño Estructural Cuadrado De 20 X 20 X 1,25 Mm",
@@ -105,10 +105,10 @@ export const businesses: any = [
           content: 1,
           contentType: "Unidad (u)",
           images: [
-            "https://http2.mlstatic.com/D_NQ_NP_2X_919470-MLA31012907670_062019-F.webp"
-          ]
-        }
-      ]
-    }
-  }
+            "https://http2.mlstatic.com/D_NQ_NP_2X_919470-MLA31012907670_062019-F.webp",
+          ],
+        },
+      ],
+    },
+  },
 ];
