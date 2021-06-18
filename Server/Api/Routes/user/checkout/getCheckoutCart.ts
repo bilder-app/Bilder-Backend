@@ -22,7 +22,8 @@ export default Router({ mergeParams: true }).get(
               "takeAway",
               "delivery",
               "deliveryPrice",
-              "freeDeliveryAt"
+              "freeDeliveryAt",
+              "address"
             ]
           }
         ]
