@@ -5,10 +5,12 @@ import {
   ForeignKey,
   BelongsToMany,
   DataType,
+  HasOne
 } from "sequelize-typescript";
 import BusinessProductInOrder from "./BusinessProductInOrder";
 import Product from "./Product";
 import Business from "./Business";
+import Person from "./Person";
 
 @Table
 export default class BusinessOrder extends Model {
@@ -19,9 +21,12 @@ export default class BusinessOrder extends Model {
   @BelongsToMany(() => Product, () => BusinessProductInOrder)
   products: Product[];
 
+  @Column
+  clientId: number;
+
   @Column({
     allowNull: false,
-    type: DataType.ENUM("preparing", "ready", "sent"),
+    type: DataType.ENUM("preparing", "ready", "sent")
   })
   state: string;
 }

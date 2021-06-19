@@ -4,7 +4,7 @@ import {
   Model,
   ForeignKey,
   HasMany,
-  BelongsToMany,
+  BelongsToMany
 } from "sequelize-typescript";
 import Order from "./Order";
 import Product from "./Product";
@@ -32,6 +32,9 @@ export default class Person extends Model {
 
   @Column({ allowNull: true })
   address: string;
+
+  @Column({ allowNull: true })
+  contactNumber: number;
 
   @HasMany(() => Order)
   orders: Order[];

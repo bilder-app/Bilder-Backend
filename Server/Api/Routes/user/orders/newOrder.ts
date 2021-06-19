@@ -43,7 +43,8 @@ export default Router({ mergeParams: true }).post(
     for (const [businessId, productsArr] of Object.entries(prods)) {
       const newBusinessOrder = await BusinessOrder.create({
         businessId,
-        state: "preparing"
+        state: "preparing",
+        clientId: req.person!.id
       });
       (productsArr as any[]).forEach(async (prod) => {
         await BusinessProductInOrder.create({
