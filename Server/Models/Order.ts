@@ -3,9 +3,8 @@ import {
   Column,
   Model,
   ForeignKey,
-  DataType,
   BelongsToMany,
-  HasOne,
+  HasOne
 } from "sequelize-typescript";
 import ProductInOrder from "./ProductInOrder";
 import Product from "./Product";
@@ -18,15 +17,15 @@ export default class Order extends Model {
   @Column
   userId: number;
 
-  @Column({
-    allowNull: false,
-    type: DataType.ENUM("pending", "cancelled", "completed"),
-  })
-  state: string[];
-
   @BelongsToMany(() => Product, () => ProductInOrder)
   products: Product[];
 
   @HasOne(() => Shipping)
   shipping: Shipping;
+
+  @Column
+  productsPrice: number;
+
+  @Column
+  shippingPrice: number;
 }
