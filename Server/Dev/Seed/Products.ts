@@ -8,7 +8,7 @@ export const businesses: any = [
       nameBusiness: "El Corralón",
       profileImage:
         "https://scontent.faep27-1.fna.fbcdn.net/v/t1.6435-9/159335784_271238917774422_4526760166718103554_n.png?_nc_cat=110&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=--DnqIBOtHwAX9k0NiQ&_nc_ht=scontent.faep27-1.fna&oh=dc0b383588568c7d298e8e75986a67e2&oe=60D11706",
-      cuit: 30 - 70864554 - 3,
+      cuit: "30-70864554-3",
       sector: "Materiales de Construcción",
       contact: 1165871324,
       address: "Av.Rivadavia 764",
@@ -20,8 +20,8 @@ export const businesses: any = [
         {
           name: "Cemento Holcim Cpc 40 X 50 Kg",
           description:
-            "Estáespecialmente recomendado para obras hidráulicas, hormigones en masa, fundaciones y estructuras en medios agresivos.",
-          price: 600,
+            "Está especialmente recomendado para obras hidráulicas, hormigones en masa, fundaciones y estructuras en medios agresivos.",
+          price: 650,
           stock: 150,
           brand: "Holcim",
           content: 50,
@@ -65,19 +65,6 @@ export const businesses: any = [
           contentType: "Kilo (k)",
           images: [
             "https://http2.mlstatic.com/D_NQ_NP_749507-MLA44401709188_122020-O.webp",
-          ],
-        },
-        {
-          name: "Cemento Avellaneda Bolsa X 50 Kg",
-          description:
-            "Estructuras en general: • Hormigón elaborado • Estructuras de hormigón armado, pretensado y postensado • Pavimentos, pistas de aeropuertos y puentes • Canales y alcantarillas",
-          price: 790,
-          stock: 100,
-          content: 50,
-          brand: "Avellaneda",
-          contentType: "Kilo (k)",
-          images: [
-            "https://http2.mlstatic.com/D_NQ_NP_670023-MLA46428998503_062021-O.webp",
           ],
         },
         {
@@ -129,6 +116,78 @@ export const businesses: any = [
             "https://http2.mlstatic.com/D_NQ_NP_898584-MLA46320182034_062021-O.webp",
           ],
         },
+        {
+          name: "Arena Sellada En Bolsa Aprox 30 Kg",
+          description: "Arena embolsada y sellada con peso aproximado a 30 kg",
+          price: 150,
+          stock: 200,
+          content: 30,
+          contentType: "Kilo (k)",
+          images: [
+            "https://http2.mlstatic.com/D_NQ_NP_619896-MLA41361305041_042020-O.webp",
+            "https://http2.mlstatic.com/D_Q_NP_830110-MLA41361275670_042020-R.webp",
+          ],
+        },
+        {
+          name: "Pegamento Para Porcelanato Holcim X 25 Kg",
+          description:
+            "Apto para pisos, paredes y techos, así sea con porcelanatos, porcelanicos, baldosas y mosaicos.Fácil y rápida trabajabilidad. Son transitables a las 24 hs aproximadamente.Aplicación para INTERIOR-EXTERIOR.",
+          price: 1200,
+          stock: 200,
+          content: 25,
+          contentType: "Kilo (k)",
+          images: [
+            "https://http2.mlstatic.com/D_NQ_NP_696740-MLA45813179071_052021-O.webp",
+          ],
+        },
+        {
+          name: "Amoladora angular Lusqtoff AML850-8 de 50 Hz naranja 850 W 220 V",
+          description:
+            "Con la amoladora angular Lusqtoff AML850-8 vas a poder realizar distintos trabajos de corte y pulido. Tiene un potente motor de 850 W.Además, su avanzado sistema de seguridad incorporado la vuelven un dispositivo ideal para tu taller.",
+          price: 4200,
+          stock: 20,
+          content: 1,
+          contentType: "Unidad (u)",
+          images: [
+            "https://http2.mlstatic.com/D_NQ_NP_652636-MLA43228769094_082020-O.webp",
+          ],
+        },
+        {
+          name: "Zapatilla Mutinorma Top Alargue 5 Tomas Con Cable",
+          description:
+            "Zapatilla Multinorma Top 5 Tomas Con Cable Tecla Blanco",
+          price: 709,
+          stock: 20,
+          content: 1,
+          contentType: "Unidad (u)",
+          images: [
+            "https://http2.mlstatic.com/D_NQ_NP_987293-MLA45457245710_042021-O.webp",
+          ],
+        },
+        {
+          name: "Grifería de bacha Hydros Viva Cromo 345211 color cromo",
+          description:
+            "Zapatilla Multinorma Top 5 Tomas Con Cable Tecla Blanco",
+          price: 4200,
+          stock: 20,
+          content: 1,
+          contentType: "Unidad (u)",
+          images: [
+            "https://http2.mlstatic.com/D_NQ_NP_772952-MLA43132471632_082020-O.webp",
+          ],
+        },
+        {
+          name: "Caño Termofusion Pn20 25 Mm Fria Caliente Fusion",
+          description:
+            "Zapatilla Multinorma Top 5 Tomas Con Cable Tecla Blanco",
+          price: 624,
+          stock: 20,
+          content: 1,
+          contentType: "Unidad (u)",
+          images: [
+            "https://http2.mlstatic.com/D_NQ_NP_901407-MLA31614652826_072019-O.webp",
+          ],
+        },
       ],
     },
   },
@@ -141,7 +200,7 @@ export const businesses: any = [
       nameBusiness: "Maderera Gomez",
       profileImage:
         "https://scontent.faep27-1.fna.fbcdn.net/v/t1.6435-9/105518409_1247878268880816_7027431291031134738_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=E7oWa36pchgAX-YonG0&_nc_ht=scontent.faep27-1.fna&oh=f3e0a461379a1c458c986ab17b76a20a&oe=60D1B0B1",
-      cuit: 30 - 71264554 - 3,
+      cuit: "30 - 71264554 - 3",
       sector: "Maderera",
       contact: 1173585647,
       address: "Av.Rivadavia 764",
@@ -151,27 +210,39 @@ export const businesses: any = [
       freeDeliveryAt: 5000,
       products: [
         {
-          name: "Chapa Acanalada Galvanizada C-30 Ancho 0,88mts Oferta!!!",
+          name: "Tablón De Pino 2 Metros X 0,80 Metros",
           description:
-            "CHAPA ACANALADA GALVANIZADA CALIBRE 30 de 0,88 m DE ANCHO - Realizamos cortes a medida en el momento - La chapa se fracciona cada 50 cm",
-          price: 990,
-          stock: 15,
+            "Tablon elaborado con madera de pino Eliotis.Alistonado y Cepillado.",
+          price: 4600,
+          stock: 50,
           content: 1,
           contentType: "Unidad (u)",
           images: [
-            "https://http2.mlstatic.com/D_NQ_NP_2X_658725-MLA43228610507_082020-F.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_796052-MLA45681503939_042021-O.webp",
           ],
         },
         {
-          name: "Caño Estructural Cuadrado De 20 X 20 X 1,25 Mm",
-          description:
-            "CHAPA ACANALADA GALVANIZADA CALIBRE 30 de 0,88 m DE ANCHO - Realizamos cortes a medida en el momento - La chapa se fracciona cada 50 cm",
-          price: 1320,
-          stock: 15,
+          name: "Tablero Pino 20 Mm 1.20x2.40 Mt",
+          description: "Tablero Pino Alistonado 20mm 1.22x2.40",
+          price: 11350,
+          stock: 50,
           content: 1,
           contentType: "Unidad (u)",
           images: [
-            "https://http2.mlstatic.com/D_NQ_NP_2X_919470-MLA31012907670_062019-F.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_907597-MLA31604088815_072019-O.webp",
+          ],
+        },
+        {
+          name: "Cetol Classic Satinado 1l Protector Exterior Madera Pintum",
+          description: "Tablero Pino Alistonado 20mm 1.22x2.40",
+          price: 1063,
+          stock: 50,
+          brand: "Cetol",
+          model: "7798043621315",
+          content: 1,
+          contentType: "Unidad (u)",
+          images: [
+            "https://http2.mlstatic.com/D_NQ_NP_873379-MLA43644892617_102020-O.webp",
           ],
         },
       ],
@@ -186,7 +257,7 @@ export const businesses: any = [
       nameBusiness: "Hierros Nacho",
       profileImage:
         "https://hierrosnacho.com/wp-content/uploads/2018/10/hyn.png",
-      cuit: 30 - 72727272 - 4,
+      cuit: "30 - 72727272 - 4",
       sector: "Siderometalurgia",
       contact: 1170685647,
       address: "Av.Brasil 758",
@@ -196,15 +267,17 @@ export const businesses: any = [
       freeDeliveryAt: 10000,
       products: [
         {
-          name: "Chapa Acanalada Galvanizada C-30 Ancho 0,88mts Oferta!!!",
+          name: "Chapa Acanalada Galvanizada C-30 Ancho 0,88mts ",
           description:
             "CHAPA ACANALADA GALVANIZADA CALIBRE 30 de 0,88 m DE ANCHO - Realizamos cortes a medida en el momento - La chapa se fracciona cada 50 cm",
-          price: 990,
+          price: 1320,
           stock: 15,
+          brand: "Ternium",
+          model: "Sinusoidal",
           content: 1,
           contentType: "Unidad (u)",
           images: [
-            "https://http2.mlstatic.com/D_NQ_NP_2X_658725-MLA43228610507_082020-F.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_989218-MLA42835003591_072020-O.webp",
           ],
         },
         {
@@ -217,6 +290,18 @@ export const businesses: any = [
           contentType: "Unidad (u)",
           images: [
             "https://http2.mlstatic.com/D_NQ_NP_2X_919470-MLA31012907670_062019-F.webp",
+          ],
+        },
+        {
+          name: "Caño Estructural Cuadrado De 100 X 100 X 2,00 Mm",
+          description:
+            "CAÑO ESTRUCTURAL CUADRADO CONFORMADO DE CHAPA SAE 1010 (HIERRO)  MEDIDA: 100 X 100 MM ESPESOR: 2.00 MM  LARGO: 6000 MM",
+          price: 10850,
+          stock: 15,
+          content: 1,
+          contentType: "Unidad (u)",
+          images: [
+            "https://http2.mlstatic.com/D_NQ_NP_626367-MLA29177567123_012019-O.webp",
           ],
         },
       ],
