@@ -10,25 +10,31 @@ export default Router({ mergeParams: true }).put(
   async (req, res) => {
     const { productId } = req.params as unknown as { productId: number };
     const { amount } = req.body;
-    await ProductInCart.findOrCreate({
+
+    const product = await ProductInCart.findOne({
       where: {
-        personId: req.user!.id,
-        productId
+        personId: req.person!.id,
+        productId,
       },
-      defaults: {
-        amount: 1
-      }
     });
+
+    if (!product)
+      await ProductInCart.create({
+        productId,
+        personId: req.person!.id,
+        amount: 1,
+      });
+
     await ProductInCart.update(
       {
-        amount
+        amount,
       },
       {
         where: {
-          personId: req.user!.id,
-          productId
+          personId: req.person!.id,
+          productId,
         },
-        returning: true
+        returning: true,
       }
     );
     res.sendStatus(200);
