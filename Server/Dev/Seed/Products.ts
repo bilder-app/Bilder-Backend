@@ -12,7 +12,7 @@ export const businesses: any = [
       sector: "Materiales de Construcción",
       contact: 1165871324,
       address: "Av.Rivadavia 764",
-      takeAway: false,
+      takeAway: true,
       delivery: true,
       deliveryPrice: 2000,
       freeDeliveryAt: 10000,
